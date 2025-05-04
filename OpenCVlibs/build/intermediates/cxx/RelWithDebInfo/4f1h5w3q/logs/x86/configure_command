@@ -1,0 +1,18 @@
+/Users/oleksandrhojskij/Library/Android/sdk/cmake/3.22.1/bin/cmake \
+  -H/Users/oleksandrhojskij/AndroidStudioProjects/Art/OpenCVlibs/libcxx_helper \
+  -DCMAKE_SYSTEM_NAME=Android \
+  -DCMAKE_EXPORT_COMPILE_COMMANDS=ON \
+  -DCMAKE_SYSTEM_VERSION=21 \
+  -DANDROID_PLATFORM=android-21 \
+  -DANDROID_ABI=x86 \
+  -DCMAKE_ANDROID_ARCH_ABI=x86 \
+  -DANDROID_NDK=/Users/oleksandrhojskij/Library/Android/sdk/ndk/27.0.12077973 \
+  -DCMAKE_ANDROID_NDK=/Users/oleksandrhojskij/Library/Android/sdk/ndk/27.0.12077973 \
+  -DCMAKE_TOOLCHAIN_FILE=/Users/oleksandrhojskij/Library/Android/sdk/ndk/27.0.12077973/build/cmake/android.toolchain.cmake \
+  -DCMAKE_MAKE_PROGRAM=/Users/oleksandrhojskij/Library/Android/sdk/cmake/3.22.1/bin/ninja \
+  -DCMAKE_LIBRARY_OUTPUT_DIRECTORY=/Users/oleksandrhojskij/AndroidStudioProjects/Art/OpenCVlibs/build/intermediates/cxx/RelWithDebInfo/4f1h5w3q/obj/x86 \
+  -DCMAKE_RUNTIME_OUTPUT_DIRECTORY=/Users/oleksandrhojskij/AndroidStudioProjects/Art/OpenCVlibs/build/intermediates/cxx/RelWithDebInfo/4f1h5w3q/obj/x86 \
+  -DCMAKE_BUILD_TYPE=RelWithDebInfo \
+  -B/Users/oleksandrhojskij/AndroidStudioProjects/Art/OpenCVlibs/.cxx/RelWithDebInfo/4f1h5w3q/x86 \
+  -GNinja \
+  -DANDROID_STL=c++_shared

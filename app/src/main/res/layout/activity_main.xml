@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".MainActivity">
+
+    <!-- 📷 Відео з камери -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- 🎯 Кнопка "Відкрити камеру" (правий нижній кут) -->
+    <ImageButton
+        android:id="@+id/btnOpenCamera"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/round_button"
+        android:contentDescription="Open Camera"
+        android:scaleType="centerInside"
+        />
+
+    <!-- 🕘 Кнопка "Історія" (лівий нижній кут) -->
+    <ImageButton
+        android:id="@+id/btnViewHistory"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="16dp"
+        android:background="@drawable/round_button"
+        android:contentDescription="View History"
+        android:scaleType="centerInside"
+        android:src="@drawable/artist" />
+
+</RelativeLayout>

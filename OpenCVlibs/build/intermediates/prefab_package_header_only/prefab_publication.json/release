@@ -1,0 +1,17 @@
+{
+  "installationFolder": "/Users/oleksandrhojskij/AndroidStudioProjects/Art/OpenCVlibs/build/intermediates/prefab_package/release/prefab",
+  "gradlePath": ":OpenCVlibs",
+  "packageInfo": {
+    "packageName": "OpenCVlibs",
+    "packageSchemaVersion": 2,
+    "packageDependencies": [],
+    "modules": [
+      {
+        "moduleName": "opencv_jni_shared",
+        "moduleHeaders": "/Users/oleksandrhojskij/AndroidStudioProjects/Art/OpenCVlibs/native/jni/include",
+        "moduleExportLibraries": [],
+        "abis": []
+      }
+    ]
+  }
+}

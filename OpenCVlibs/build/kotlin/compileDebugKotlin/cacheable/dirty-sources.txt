@@ -1,0 +1,2 @@
+/Users/oleksandrhojskij/AndroidStudioProjects/Art/OpenCVlibs/java/src/org/opencv/core/MatAt.kt
+/Users/oleksandrhojskij/AndroidStudioProjects/Art/OpenCVlibs/java/src/org/opencv/core/MatMatMul.kt
