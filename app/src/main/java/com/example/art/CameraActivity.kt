@@ -68,10 +68,18 @@ class CameraActivity : ComponentActivity() {
                                 Toast.makeText(this, "✅ Recognized: $matchName", Toast.LENGTH_SHORT).show()
                                 Log.d("Recognition", "✅ Found: $matchName")
 
-                                val intent = Intent(this, MainActivity::class.java)
-                                intent.putExtra("MATCH_NAME", matchName)
-                                startActivity(intent)
-                                finish()
+                                // CameraActivity.kt  :contentReference[oaicite:0]{index=0}:contentReference[oaicite:1]{index=1}
+                                runOnUiThread {
+                                    // замість MainActivity запускаємо PaintingInfoActivity
+                                    val infoIntent = Intent(this, PaintingInfoActivity::class.java).apply {
+                                        putExtra("painting_name", matchName)
+                                        // за потреби, пізніше можна передавати опис чи ID зображення:
+                                        // putExtra("painting_desc", "Короткий опис …")
+                                        // putExtra("painting_image_res", R.drawable.my_painting)
+                                    }
+                                    startActivity(infoIntent)
+                                    finish()
+                                }
                             }
                         }
                     },
