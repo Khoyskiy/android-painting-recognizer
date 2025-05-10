@@ -3,6 +3,7 @@ package com.example.art.data;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 import com.example.art.model.PaintingDescriptor;
 
@@ -41,6 +42,7 @@ public class DatabaseManager {
 
             cursor.close();
         }
+        Log.d("DB", "✅ Loaded paintings: " + paintings.size());
         return paintings;
     }
 }

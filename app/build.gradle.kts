@@ -42,6 +42,11 @@ android {
 
 dependencies {
 
+
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.coil)
+
    //CameraX
     implementation(libs.androidx.camera.core)
     implementation(libs.androidx.camera.camera2)

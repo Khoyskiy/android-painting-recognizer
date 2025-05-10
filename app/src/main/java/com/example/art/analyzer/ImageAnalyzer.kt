@@ -105,4 +105,10 @@ class ImageAnalyzer(
         mat.put(0, 0, byteArray)
         return mat
     }
+
+    fun resetRecognition() {
+        recognitionTriggered = false
+        matchTracker.reset()
+    }
+
 }

@@ -1,12 +1,13 @@
 package com.example.art.data;
 
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import java.io.*;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
-    private static final String DB_NAME = "paintings.db";
+    private static final String DB_NAME = "paintings_vers_1.db";
     private final String DB_PATH;
     private final Context context;
 
@@ -19,16 +20,24 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     private void createDatabase() {
         File dbFile = new File(DB_PATH);
-        if (!dbFile.exists()) {
+
+        SharedPreferences prefs = context.getSharedPreferences("db_prefs", Context.MODE_PRIVATE);
+        String savedDbName = prefs.getString("db_name", "");
+
+        boolean shouldCopy = !dbFile.exists() || !savedDbName.equals(DB_NAME);
+
+        if (shouldCopy) {
             this.getReadableDatabase();
             this.close();
             try {
                 copyDatabase();
+                prefs.edit().putString("db_name", DB_NAME).apply(); // зберігаємо нову назву
             } catch (IOException e) {
                 e.printStackTrace();
             }
         }
     }
+
 
     private void copyDatabase() throws IOException {
         InputStream input = context.getAssets().open(DB_NAME);
